@@ -1,0 +1,12 @@
+package character.enemy;
+import character.*;
+
+public class Vampire extends Enemy {
+    public Vampire(String name, double attackMultiplier) {
+        super(name, attackMultiplier);
+    }
+
+    public void attack(User enemy) {
+        enemy.decreaseHP(this.getAttackMultiplier() *2 );
+    }
+}
